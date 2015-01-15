@@ -34,9 +34,6 @@ public class MsgNotificationListener extends AccessibilityService implements Tex
     int mNotificationID = 001;
     public NotificationManager nManager;
 
-
-
-
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
      //Log.d(TAG,"onAccessibilityEvent");
