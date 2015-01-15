@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TextWhisper</string>
+    <string name="str_version">Versión 1.0</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="str_thanks">Gracias por descargar TextWhisper.</string>
+    <string name="str_inform">Esta aplicación va a leer los mensajes de texto entrantes a usted cuando usted tiene sus auriculares.</string>
+    <string name="str_example">Por ejemplo , si usted recibe un mensaje de WhatsApp de un amigo llamado Bob, esta aplicación leerá "mensaje de Whatsapp de Bob "</string>
+    <string name="str_nextpage">Pase a la página siguiente para obtener instrucciones sobre su puesta en marcha-></string>
+    <string name="str_instr_head">INSTRUCCIONES DE INSTALACIÓN</string>
+    <string name="str_swipe">Sobre la página siguiente - Swipe</string>
+    <string name="str_instr_string">Encienda la configuración de accesibilidad para TextWhisper como se muestra en la imagen. Haga clic en el botón de abajo y te llevará allí!</string>
+    <string name="acc_string">Ajustes de accesibilidad Abiertas</string>
+    <string name="str_finish_setup">Eso es todo! TextWhisper está todo listo. Sólo cierra este menú y continuar lo que estaba haciendo !!</string>
+    <string name="str_tw_stopped">TW se ha detenido. Vuelve aquí para encenderlo cada vez que te sientes como si lo necesita .</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TextWhisper.iml" filepath="$PROJECT_DIR$/TextWhisper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WhoDatTest.iml" filepath="$PROJECT_DIR$/WhoDatTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+    </modules>
+  </component>
+</project>
+
