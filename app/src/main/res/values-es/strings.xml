@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">TextWhisper</string>
-    <string name="str_version">Versión 1.1</string>
+    <string name="str_version">Versión 1.1.1</string>
     <string name="action_settings">Ajustes</string>
     <string name="str_thanks">Gracias por descargar TextWhisper.</string>
     <string name="str_inform">Esta aplicación va a leer los mensajes de texto entrantes a usted cuando usted tiene sus auriculares.</string>
