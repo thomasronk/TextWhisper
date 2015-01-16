@@ -14,13 +14,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.ToggleButton;
 
 public class OpeningScreen extends ActionBarActivity {
     String TAG = "OPENINGSCREEN";
+
     Intent serviceIntent;
     ViewPager openingPgr;
     TutorialFragment tF;
     AccessibilityOpenFragment aF;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,4 +101,8 @@ public class OpeningScreen extends ActionBarActivity {
         super.onBackPressed();
         //Log.d(TAG,"Activity called");
     }
+
+
+
+
 }

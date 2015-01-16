@@ -24,7 +24,7 @@
             android:gravity="center"
             android:text="@string/str_version"
             android:textColor="#ffff"
-            android:textSize="3pt"
+            android:textSize="4pt"
             android:id="@+id/textView2" />
 
     </RelativeLayout>
@@ -59,7 +59,7 @@
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1" >
+        android:layout_weight="0.1">
 
         <Button
             android:layout_width="fill_parent"

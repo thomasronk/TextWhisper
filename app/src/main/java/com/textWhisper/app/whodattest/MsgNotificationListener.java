@@ -36,7 +36,7 @@ public class MsgNotificationListener extends AccessibilityService implements Tex
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
-     //Log.d(TAG,"onAccessibilityEvent");
+     //Log.d(TAG,"onAccessibilityEvent"+AccessibilityOpenFragment.readOutVariableState);
         final int eventType = event.getEventType();
         if (eventType == AccessibilityEvent.TYPE_NOTIFICATION_STATE_CHANGED) {
             final String sourcePackageName = (String)event.getPackageName();
@@ -54,9 +54,8 @@ public class MsgNotificationListener extends AccessibilityService implements Tex
                 //Log.d(TAG,"Message content is "+ messages.get(0));
                 if (messages.size() > 0) {
                     String notificationMsg = "" + messages.get(0);
-                    //Log.v(TAG, "Captured notification message [" + notificationMsg + "] for source [" + sourcePackageName + "]");
+                   // Log.v(TAG, "Captured notification message [" + notificationMsg + "] for source [" + sourcePackageName + "]");
                     msgParts = notificationMsg.split(":");
-                   // Log.v(TAG, "Broadcasting for " + Constants.ACTION_CATCH_NOTIFICATION);
                     if (sourcePackageName.equals("com.whatsapp"))
                     {
                         //Log.d(TAG,"whatsapp message "+msgParts[0].split(" ")[2]);
@@ -76,7 +75,7 @@ public class MsgNotificationListener extends AccessibilityService implements Tex
                     }
                     else if(sourcePackageName.equals("com.google.android.talk"))
                     {
-                       // Log.d(TAG,"Google talk  message from "+msgParts[0]);
+                       //Log.d(TAG,"Google talk  message from "+msgParts[0]);
                         finalSpeechString = "Google Talk Message from"+msgParts[0];
                     }
                     else if(sourcePackageName.equals("com.google.android.gm"))
@@ -84,9 +83,32 @@ public class MsgNotificationListener extends AccessibilityService implements Tex
                         //Log.d(TAG,"Gmail message from "+msgParts[0]);
                         finalSpeechString = "Jeemail Message from"+msgParts[0];
                     }
-                    if(PortListenerService.isHeadSetConnected==true) {
-                        //textToSpeech.speak(notificationMsg, TextToSpeech.QUEUE_FLUSH, null);
+                    else if(sourcePackageName.equals("com.facebook.orca"))
+                    {
+                        //Log.d(TAG,"Facebook message from "+msgParts[0]);
+                    }
+                    else if(sourcePackageName.equals("com.viber.voip"))
+                    {
+                        //Log.d(TAG,"Viber message from "+msgParts[0]);
+                        finalSpeechString = "Viber Message from"+msgParts[0];
+                    }
+                    /*else if(sourcePackageName.equals("com.tencent.mm"))
+                    {
+                        //Log.d(TAG,"WeChat message from "+msgParts[0]);
+                        finalSpeechString = "WeChat Message from"+msgParts[0];
+                    }*/
+                   // com.tencent.mm
+                    if(AccessibilityOpenFragment.readOutVariableState)
+                    {
                         textToSpeech.speak(finalSpeechString, TextToSpeech.QUEUE_FLUSH, null);
+                       // Log.d(TAG,"Read out everywhere");
+                    }
+                    else if(!AccessibilityOpenFragment.readOutVariableState)
+                    {
+                        if (PortListenerService.isHeadSetConnected==true) {
+                            //Log.d(TAG,"Read out through headphones");
+                            textToSpeech.speak(finalSpeechString, TextToSpeech.QUEUE_FLUSH, null);
+                        }
                     }
 
                 } else {
